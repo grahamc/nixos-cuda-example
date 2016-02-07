@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Simple OpenGLES</name>
+    <description><![CDATA[Demonstrates data exchange between CUDA and OpenGL ES (aka Graphics interop). The program modifies vertex positions with CUDA and uses OpenGL ES to render the geometry.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>32</include>
+    </supported_sm_architectures>
+    <keywords>OpenGL ES</keywords>
+    <scope>1:CUDA Basic Topics,2:Graphics Interop</scope>
+    <files>
+        <file>data\ref_simpleGLES.bin</file>
+    </files>
+    <qatests>
+        <qatest>-file=ref_simpleGLES.bin</qatest>
+    </qatests>
+    <cudaapi>cudaGraphicsMapResources</cudaapi>
+    <cudaapi>cudaGraphicsUnmapResources</cudaapi>
+    <cudaapi>cudaGraphicsResourceGetMappedPointer</cudaapi>
+    <cudaapi>cudaGraphicsRegisterResource</cudaapi>
+    <cudaapi>cudaGraphicsGLRegisterBuffer</cudaapi>
+    <cudaapi>cudaGraphicsUnregisterResource</cudaapi>
+    <keyconcepts level="basic">Graphics Interop</keyconcepts>
+    <keyconcepts level="basic">Vertex Buffers</keyconcepts>
+    <keyconcepts level="basic">3D Graphics</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm32</sm-arch>
+    <type>exe</type>
+    <primary-file>simpleGLES.cu</primary-file>
+    <required_dependencies>
+        <dependency>X11</dependency>
+        <dependency>GLES</dependency>
+    </required_dependencies>
+    <supported-env>:arm</supported-env>
+</entry>

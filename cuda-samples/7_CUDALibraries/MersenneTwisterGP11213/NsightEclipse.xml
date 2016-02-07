@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>MersenneTwisterGP11213</name>
+    <description><![CDATA[This sample demonstrates the Mersenne Twister random number generator GP11213 in cuRAND.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,CURAND,Monte-Carlo,random number generation,GSFR,Mersenne Twister</keywords>
+    <scope>1:CUDA Advanced Topics,3:Computational Finance</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="basic">Computational Finance</keyconcepts>
+    <keyconcepts level="basic">CURAND Library</keyconcepts>
+    <library>curand_static</library>
+    <library>culibos</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>MersenneTwister.cpp</primary-file>
+    <required_dependencies>
+        <dependency>CURAND</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Simple Texture (Driver Version)</name>
+    <description><![CDATA[Simple example that demonstrates use of Textures in CUDA.  This sample uses the new CUDA 4.0 kernel launch Driver API.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords></keywords>
+    <scope>1:CUDA Basic Topics,2:Texture,2:Image Processing</scope>
+    <files>
+        <file>data\simpleTexture_kernel32.ptx</file>
+        <file>data\simpleTexture_kernel64.ptx</file>
+        <file>data\lena_bw.pgm</file>
+        <file>data\ref_rotated.pgm</file>
+    </files>
+    <cudaapi level="driver">cuModuleLoad</cudaapi>
+    <cudaapi level="driver">cuModuleLoadDataEx</cudaapi>
+    <cudaapi level="driver">cuModuleGetFunction</cudaapi>
+    <cudaapi level="driver">cuLaunchKernel</cudaapi>
+    <cudaapi level="driver">cuCtxSynchronize</cudaapi>
+    <cudaapi level="driver">cuMemcpyDtoH</cudaapi>
+    <cudaapi level="driver">cuMemAlloc</cudaapi>
+    <cudaapi level="driver">cuMemFree</cudaapi>
+    <cudaapi level="driver">cuArrayCreate</cudaapi>
+    <cudaapi level="driver">cuArrayDestroy</cudaapi>
+    <cudaapi level="driver">cuCtxDetach</cudaapi>
+    <cudaapi level="driver">cuMemcpy2D</cudaapi>
+    <cudaapi level="driver">cuModuleGetTexRef</cudaapi>
+    <cudaapi level="driver">cuTexRefSetArray</cudaapi>
+    <cudaapi level="driver">cuTexRefSetAddressMode</cudaapi>
+    <cudaapi level="driver">cuTexRefSetFilterMode</cudaapi>
+    <cudaapi level="driver">cuTexRefSetFlags</cudaapi>
+    <cudaapi level="driver">cuTexRefSetFormat</cudaapi>
+    <cudaapi level="driver">cuParamSetTexRef</cudaapi>
+    <keyconcepts level="basic">CUDA Driver API</keyconcepts>
+    <keyconcepts level="basic">Texture</keyconcepts>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <library os="linux">cuda</library>
+    <library os="windows">cuda</library>
+    <library os="macosx" framework="true">CUDA</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>simpleTextureDrv.cpp</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+    <no-nsight-eclipse/>
+</entry>

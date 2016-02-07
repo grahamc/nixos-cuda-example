@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Fast Walsh Transform</name>
+    <description><![CDATA[Naturally(Hadamard)-ordered Fast Walsh Transform for batching vectors of arbitrary eligible lengths that are power of two in size.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,DSP,Linear Algebra,dyadic convolution</keywords>
+    <scope>1:CUDA Advanced Topics,3:Linear Algebra,1:Data-Parallel Algorithms,2:Image Processing,2:Data Compression,2:Video Codecs</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">Linear Algebra</keyconcepts>
+    <keyconcepts level="advanced">Data-Parallel Algorithms</keyconcepts>
+    <keyconcepts level="advanced">Video Compression</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>fastWalshTransform.cu</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

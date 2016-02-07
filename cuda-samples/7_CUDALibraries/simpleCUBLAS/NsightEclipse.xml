@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Simple CUBLAS</name>
+    <description><![CDATA[Example of using CUBLAS using the new CUBLAS API interface available in CUDA 4.0.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,CUBLAS,Linear Algebra</keywords>
+    <scope>1:CUDA Basic Topics,3:Linear Algebra</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">CUBLAS Library</keyconcepts>
+    <library>cublas</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>simpleCUBLAS.cpp</primary-file>
+    <required_dependencies>
+        <dependency>CUBLAS</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Monte Carlo Option Pricing with Multi-GPU support</name>
+    <description><![CDATA[This sample evaluates fair call price for a given set of European options using the Monte Carlo approach, taking advantage of all CUDA-capable GPUs installed in the system. This sample use double precision hardware if a GTX 200 class GPU is present.  The sample also takes advantage of CUDA 4.0 capability to supporting using a single CPU thread to control multiple GPUs]]></description>
+    <whitepaper>doc\MonteCarlo.pdf</whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,CURAND,Computational Finance,option pricing,Monte Carlo,multi-GPU support</keywords>
+    <scope>1:CUDA Advanced Topics,1:Performance Strategies,3:Computational Finance</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <library>curand</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>MonteCarloMultiGPU.cpp</primary-file>
+    <required_dependencies>
+        <dependency>CURAND</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

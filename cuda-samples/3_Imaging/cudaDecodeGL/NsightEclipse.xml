@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>CUDA Video Decoder GL API</name>
+    <description><![CDATA[This sample demonstrates how to efficiently use the CUDA Video Decoder API to decode video sources based on MPEG-2, VC-1, and H.264.  YUV to RGB conversion of video is accomplished with CUDA kernel.  The output result is rendered to a OpenGL surface.  The decoded video is black, but can be enabled with -displayvideo added to the command line.  Requires Compute Capability 2.0 or higher.]]></description>
+    <whitepaper>doc\nvcuvid.pdf</whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,NVCUVID,GPGPU,video,opengl</keywords>
+    <scope>2:Graphics Interop,2:Image Processing,2:Data Compression,2:Video Codecs,2:Computer Vision</scope>
+    <files>
+        <file>data\NV12ToARGB_drvapi32.ptx</file>
+        <file>data\NV12ToARGB_drvapi64.ptx</file>
+        <file>data\plush1_720p_10s.m2v</file>
+    </files>
+    <cudaapi level="driver">cuDeviceGet</cudaapi>
+    <cudaapi level="driver">cuDeviceGetAttribute</cudaapi>
+    <cudaapi level="driver">cuDeviceComputeCapability</cudaapi>
+    <cudaapi level="driver">cuDeviceGetCount</cudaapi>
+    <cudaapi level="driver">cuDeviceGetName</cudaapi>
+    <cudaapi level="driver">cuDeviceTotalMem</cudaapi>
+    <cudaapi level="driver">cuGLCtxCreate</cudaapi>
+    <cudaapi level="driver">cuGLGetDevice</cudaapi>
+    <cudaapi level="driver">cuModuleLoad</cudaapi>
+    <cudaapi level="driver">cuModuleUnload</cudaapi>
+    <cudaapi level="driver">cuModuleGetFunction</cudaapi>
+    <cudaapi level="driver">cuModuleGetGlobal</cudaapi>
+    <cudaapi level="driver">cuModuleLoadDataEx</cudaapi>
+    <cudaapi level="driver">cuModuleGetTexRef</cudaapi>
+    <cudaapi level="driver">cuGLMapResources</cudaapi>
+    <cudaapi level="driver">cuGLUnmapResources</cudaapi>
+    <cudaapi level="driver">cuGLRegisterResource</cudaapi>
+    <cudaapi level="driver">cuGLUnregisterResource</cudaapi>
+    <cudaapi level="driver">cuGLResourceSetMapFlags</cudaapi>
+    <cudaapi level="driver">cuGLResourceGetMappedPointer</cudaapi>
+    <cudaapi level="driver">cuGLResourceGetMappedPitch</cudaapi>
+    <cudaapi level="driver">cuParamSetv</cudaapi>
+    <cudaapi level="driver">cuParamSeti</cudaapi>
+    <cudaapi level="driver">cuParamSetSize</cudaapi>
+    <cudaapi level="driver">cuLaunchGridAsync</cudaapi>
+    <cudaapi level="driver">cuCtxCreate</cudaapi>
+    <cudaapi level="driver">cuMemAlloc</cudaapi>
+    <cudaapi level="driver">cuMemFree</cudaapi>
+    <cudaapi level="driver">cuMemAllocHost</cudaapi>
+    <cudaapi level="driver">cuMemFreeHost</cudaapi>
+    <cudaapi level="driver">cuMemcpyDtoHAsync</cudaapi>
+    <cudaapi level="driver">cuMemsetD8</cudaapi>
+    <cudaapi level="driver">cuStreamCreate</cudaapi>
+    <cudaapi level="driver">cuCtxPushCurrent</cudaapi>
+    <cudaapi level="driver">cuCtxPopCurrent</cudaapi>
+    <cudaapi level="driver">cuvidCreateDecoder</cudaapi>
+    <cudaapi level="driver">cuvidDecodePicture</cudaapi>
+    <cudaapi level="driver">cuvidMapVideoFrame</cudaapi>
+    <cudaapi level="driver">cuvidUnmapVideoFrame</cudaapi>
+    <cudaapi level="driver">cuvidDestroyDecoder</cudaapi>
+    <cudaapi level="driver">cuvidCtxLockCreate</cudaapi>
+    <cudaapi level="driver">cuvidCtxLockDestroy</cudaapi>
+    <cudaapi level="driver">cuCtxDestroy</cudaapi>
+    <keyconcepts level="advanced">Graphics Interop</keyconcepts>
+    <keyconcepts level="advanced">Image Processing</keyconcepts>
+    <keyconcepts level="advanced">Video Compression</keyconcepts>
+    <library>cudart</library>
+    <library>nvcuvid</library>
+    <library os="linux">cuda</library>
+    <library os="windows">cuda</library>
+    <library os="macosx" framework="true">CUDA</library>
+    <library>GLU</library>
+    <library>GL</library>
+    <library os="macosx" framework="true">GLUT</library>
+    <library os="linux">X11</library>
+    <library os="linux">GLEW</library>
+    <library os="linux">glut</library>
+    <library os="linux">Xi</library>
+    <library os="linux">Xmu</library>
+    <library-path os="windows" arch="x86_64">../../common/lib/x64</library-path>
+    <library-path os="windows" arch="Win32">../../common/lib/Win32</library-path>
+    <library-path os="linux" arch="x86_64">../../common/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../../common/lib/linux/i686</library-path>
+    <library-path os="linux" arch="armv7l">../../common/lib/linux/armv7l</library-path>
+    <library-path os="macosx">../../common/lib/darwin</library-path>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>videoDecodeGL.cpp</primary-file>
+    <required_dependencies>
+        <dependency>X11</dependency>
+        <dependency>GL</dependency>
+        <dependency>cuvid</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7</supported-env>
+</entry>

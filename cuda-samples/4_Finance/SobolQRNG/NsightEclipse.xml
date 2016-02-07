@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Sobol Quasirandom Number Generator</name>
+    <description><![CDATA[This sample implements Sobol Quasirandom Sequence Generator.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,Advanced Topics,Quasi-Monte Carlo Integration,Computational Finance</keywords>
+    <scope>1:CUDA Advanced Topics,3:Computational Finance</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">Computational Finance</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>sobel.cpp</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

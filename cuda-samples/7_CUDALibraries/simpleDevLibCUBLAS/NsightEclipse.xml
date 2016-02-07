@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>simpleDevLibCUBLAS GPU Device API Library Functions (CUDA Dynamic Parallelism)</name>
+    <description><![CDATA[This sample implements a simple CUBLAS function calls that call GPU device API library running CUBLAS functions.  This sample requires a SM 3.5 capable device.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <from>3.5</from>
+    </supported_sm_architectures>
+    <keywords>CUDA,CUBLAS,CDP</keywords>
+    <scope>1:CUDA Basic Topics,3:Linear Algebra</scope>
+    <files>
+    </files>
+    <cudaapi>cublasCreate</cudaapi>
+    <cudaapi>cublasSetVector</cudaapi>
+    <cudaapi>cublasSgemm</cudaapi>
+    <cudaapi>cudaMalloc</cudaapi>
+    <cudaapi>cudaFree</cudaapi>
+    <cudaapi>cudaMemcpy</cudaapi>
+    <keyconcepts level="basic">CUDA Dynamic Parallelism</keyconcepts>
+    <keyconcepts level="basic">Linear Algebra</keyconcepts>
+    <library>cublas</library>
+    <library>cublas_device</library>
+    <library>cudadevrt</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation></devicecompilation>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>kernels.cu</primary-file>
+    <required_dependencies>
+        <dependency>CDP</dependency>
+        <dependency>CUBLAS</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>CUDA N-Body Simulation on Screen</name>
+    <description><![CDATA[This sample demonstrates efficient all-pairs simulation of a gravitational n-body simulation in CUDA. Unlike the OpenGL nbody sample, there is no user interaction.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,GPGPU,n-body,simulation,astrophysics,OpenGL ES</keywords>
+    <scope>2:Graphics Interop,1:CUDA Advanced Topics,1:Data-Parallel Algorithms,3:Physically-Based Simulation</scope>
+    <files>
+        <file>./galaxy_20K.bin</file>
+    </files>
+    <qatests>
+        <qatest>-benchmark -compare -cpu</qatest>
+    </qatests>
+    <cudaapi>cudaGLSetGLDevice</cudaapi>
+    <cudaapi>cudaGraphicsMapResources</cudaapi>
+    <cudaapi>cudaGraphicsUnmapResources</cudaapi>
+    <cudaapi>cudaGraphicsResourceGetMappedPointer</cudaapi>
+    <cudaapi>cudaGraphicsRegisterResource</cudaapi>
+    <cudaapi>cudaGraphicsGLRegisterBuffer</cudaapi>
+    <cudaapi>cudaGraphicsUnregisterResource</cudaapi>
+    <keyconcepts level="advanced">Graphics Interop</keyconcepts>
+    <keyconcepts level="advanced">Data Parallel Algorithms</keyconcepts>
+    <keyconcepts level="advanced">Physically-Based Simulation</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>nbody.cpp</primary-file>
+    <required_dependencies>
+        <dependency>screen</dependency>
+        <dependency>GLES</dependency>
+    </required_dependencies>
+    <supported-env>:arm</supported-env>
+</entry>

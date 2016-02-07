@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>CUDA Segmentation Tree Thrust Library</name>
+    <description><![CDATA[This sample demonstrates an approach to the image segmentation trees construction.  This method is based on Boruvka's MST algorithm.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>GPGPU,Sorting</keywords>
+    <scope>1:CUDA Advanced Topics,1:Data-Parallel Algorithms,1:Performance Strategies</scope>
+    <files>
+        <file>data\test.ppm</file>
+        <file>data\ref_00.ppm</file>
+        <file>data\ref_09.ppm</file>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">Data-Parallel Algorithms</keyconcepts>
+    <keyconcepts level="advanced">Performance Strategies</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>segmentationTree.cu</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

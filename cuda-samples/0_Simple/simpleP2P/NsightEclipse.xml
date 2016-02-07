@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Simple Peer-to-Peer Transfers with Multi-GPU</name>
+    <description><![CDATA[This application demonstrates the new CUDA 4.0 APIs that support Peer-To-Peer (P2P) copies, Peer-To-Peer (P2P) addressing, and UVA (Unified Virtual Memory Addressing) between multiple Tesla GPUs.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,Performance,multi-GPU support,peer to peer</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies</scope>
+    <files>
+    </files>
+    <cudaapi>cudaDeviceCanAccessPeer</cudaapi>
+    <cudaapi>cudaDeviceEnablePeerAccess</cudaapi>
+    <cudaapi>cudaDeviceDisablePeerAccess</cudaapi>
+    <cudaapi>cudaEventCreateWithFlags</cudaapi>
+    <cudaapi>cudaEventElapsedTime</cudaapi>
+    <cudaapi>cudaMemcpy</cudaapi>
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">Asynchronous Data Transfers</keyconcepts>
+    <keyconcepts level="basic">Unified Virtual Address Space</keyconcepts>
+    <keyconcepts level="basic">Peer to Peer Data Transfers</keyconcepts>
+    <keyconcepts level="basic">Multi-GPU</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>simpleP2P.cu</primary-file>
+    <required_dependencies>
+        <dependency>only-64-bit</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, windows7, macosx:x86_64, macosx:i686, linux:ppc64le</supported-env>
+</entry>

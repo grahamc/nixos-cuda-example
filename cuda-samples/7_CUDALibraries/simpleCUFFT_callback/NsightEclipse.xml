@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Simple CUFFT Callbacks</name>
+    <description><![CDATA[Example of using CUFFT. In this example, CUFFT is used to compute the 1D-convolution of some signal with some filter by transforming both into frequency domain, multiplying them together, and transforming the signal back to time domain. The difference between this example and the Simple CUFFT example is that the multiplication step is done by the CUFFT kernel with a user-supplied CUFFT callback routine, rather than by a separate kernel call.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+        <exclude>3.7</exclude>
+    </supported_sm_architectures>
+    <keywords>CUDA,CUFFT</keywords>
+    <scope>1:CUDA Basic Topics,2:Image Processing</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">CUFFT Library</keyconcepts>
+    <library>cufft_static</library>
+    <library>culibos</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>simpleCUFFT_callback.cu</primary-file>
+    <required_dependencies>
+        <dependency>callback</dependency>
+        <dependency>CUFFT</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, mac:x86_64, linux:ppc64le</supported-env>
+</entry>

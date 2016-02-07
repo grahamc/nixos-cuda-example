@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Vector Addition Driver API</name>
+    <description><![CDATA[This Vector Addition sample is a basic sample that is implemented element by element.  It is the same as the sample illustrating Chapter 3 of the programming guide with some additions like error checking.   This sample also uses the new CUDA 4.0 kernel launch Driver API.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>Linear Algebra</keywords>
+    <scope>1:CUDA Basic Topics,3:Linear Algebra</scope>
+    <files>
+        <file>data\vectorAdd_kernel32.ptx</file>
+        <file>data\vectorAdd_kernel64.ptx</file>
+    </files>
+    <cudaapi level="driver">cuModuleLoad</cudaapi>
+    <cudaapi level="driver">cuModuleLoadDataEx</cudaapi>
+    <cudaapi level="driver">cuModuleGetFunction</cudaapi>
+    <cudaapi level="driver">cuMemAlloc</cudaapi>
+    <cudaapi level="driver">cuMemFree</cudaapi>
+    <cudaapi level="driver">cuMemcpyHtoD</cudaapi>
+    <cudaapi level="driver">cuMemcpyDtoH</cudaapi>
+    <cudaapi level="driver">cuLaunchKernel</cudaapi>
+    <keyconcepts level="basic">CUDA Driver API</keyconcepts>
+    <keyconcepts level="basic">Vector Addition</keyconcepts>
+    <library os="linux">cuda</library>
+    <library os="windows">cuda</library>
+    <library os="macosx" framework="true">CUDA</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>vectorAddDrv.cpp</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+    <no-nsight-eclipse/>
+</entry>

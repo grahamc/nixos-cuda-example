@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Matrix Multiplication (CUDA Driver API version with Dynamic Linking Version)</name>
+    <description><![CDATA[This sample revisits matrix multiplication using the CUDA driver API. It demonstrates how to link to CUDA driver at runtime and how to use JIT (just-in-time) compilation from PTX code. It has been written for clarity of exposition to illustrate various CUDA programming principles, not with the goal of providing the most performant generic kernel for matrix multiplication. CUBLAS provides high-performance matrix multiplication.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,matrix multiply,Advanced Topics,Linear Algebra</keywords>
+    <scope>1:CUDA Advanced Topics</scope>
+    <files>
+    </files>
+    <cudaapi level="driver">cuModuleLoad</cudaapi>
+    <cudaapi level="driver">cuModuleLoadDataEx</cudaapi>
+    <cudaapi level="driver">cuModuleGetFunction</cudaapi>
+    <cudaapi level="driver">cuMemAlloc</cudaapi>
+    <cudaapi level="driver">cuMemFree</cudaapi>
+    <cudaapi level="driver">cuMemcpyHtoD</cudaapi>
+    <cudaapi level="driver">cuMemcpyDtoH</cudaapi>
+    <cudaapi level="driver">cuLaunchKernel</cudaapi>
+    <keyconcepts level="advanced">CUDA Driver API</keyconcepts>
+    <keyconcepts level="advanced">CUDA Dynamically Linked Library</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>matrixMulDynlinkJIT.cpp</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+    <no-nsight-eclipse/>
+</entry>

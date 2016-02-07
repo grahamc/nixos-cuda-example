@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Box Filter with NPP</name>
+    <description><![CDATA[A NPP CUDA Sample that demonstrates how to use NPP FilterBox function to perform a Box Filter.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,NPP,Image Processing,box filter</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies,2:Image Processing,2:Computer Vision</scope>
+    <files>
+        <file>..\..\common\data\Lena.pgm</file>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">NPP Library</keyconcepts>
+    <library>nppi_static</library>
+    <library>nppc_static</library>
+    <library>culibos</library>
+    <library>freeimage</library>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <include-path>../common/UtilNPP</include-path>
+    <include-path>../common/FreeImage/include</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>boxFilterNPP.cpp</primary-file>
+    <required_dependencies>
+        <dependency>FreeImage</dependency>
+        <dependency>NPP</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

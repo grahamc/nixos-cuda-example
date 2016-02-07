@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Unified Memory Streams</name>
+    <description><![CDATA[This sample demonstrates the use of OpenMP and streams with Unified Memory on a single GPU.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <from>3.0</from>
+    </supported_sm_architectures>
+    <keywords>CUDA,CUBLAS,OpenMP,cluster,multi-GPU Support,Unified Memory,openMP,Streams</keywords>
+    <scope>1:CUDA Basic Topics,1:CUDA Systems Integration,1:Unified Memory</scope>
+    <files>
+    </files>
+    <cudaapi>cudaMallocManaged</cudaapi>
+    <cudaapi>cudaStreamAttachManagedMem</cudaapi>
+    <keyconcepts level="basic">CUDA Systems Integration</keyconcepts>
+    <keyconcepts level="basic">OpenMP</keyconcepts>
+    <keyconcepts level="basic">CUBLAS</keyconcepts>
+    <keyconcepts level="basic">Multithreading</keyconcepts>
+    <keyconcepts level="basic">Unified Memory</keyconcepts>
+    <keyconcepts level="basic">CUDA Streams and Events</keyconcepts>
+    <library>cublas</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>UnifiedMemoryStreams.cu</primary-file>
+    <required_dependencies>
+        <dependency>UVM</dependency>
+        <dependency>CUBLAS</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, :arm, linux:ppc64le</supported-env>
+</entry>

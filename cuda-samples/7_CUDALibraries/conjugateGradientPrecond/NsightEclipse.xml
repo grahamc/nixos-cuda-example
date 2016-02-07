@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Preconditioned Conjugate Gradient</name>
+    <description><![CDATA[This sample implements a preconditioned conjugate gradient solver on GPU using CUBLAS and CUSPARSE library.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,CUBLAS,CUSPARSE,Sparse Matrix</keywords>
+    <scope>1:CUDA Advanced Topics,3:Linear Algebra</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">Linear Algebra</keyconcepts>
+    <keyconcepts level="advanced">CUBLAS Library</keyconcepts>
+    <keyconcepts level="advanced">CUSPARSE Library</keyconcepts>
+    <library>cublas</library>
+    <library>cusparse</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>main.cpp</primary-file>
+    <required_dependencies>
+        <dependency>CUBLAS</dependency>
+        <dependency>CUSPARSE</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

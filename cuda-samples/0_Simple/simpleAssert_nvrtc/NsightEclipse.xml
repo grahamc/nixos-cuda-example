@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>simpleAssert with libNVRTC</name>
+    <description><![CDATA[This CUDA Runtime API sample is a very basic sample that implements how to use the assert function in the device code. Requires Compute Capability 2.0 .]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>GPGPU,libNVRTC</keywords>
+    <scope>1:CUDA Basic Topics</scope>
+    <files>
+    </files>
+    <cudaapi>cudaMalloc</cudaapi>
+    <cudaapi>cudaMallocHost</cudaapi>
+    <cudaapi>cudaFree</cudaapi>
+    <cudaapi>cudaFreeHost</cudaapi>
+    <cudaapi>cudaMemcpy</cudaapi>
+    <keyconcepts level="basic">Assert</keyconcepts>
+    <keyconcepts level="advanced">Runtime Compilation</keyconcepts>
+    <library os="linux">cuda</library>
+    <library os="windows">cuda</library>
+    <library os="macosx" framework="true">CUDA</library>
+    <library>nvrtc</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <include-path>$(CUDA_PATH)/include</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <type>exe</type>
+    <primary-file>simpleAssert.cpp</primary-file>
+    <required_dependencies>
+        <dependency>NVRTC</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, windows7:x86_64, linux:ppc64le</supported-env>
+    <no-nsight-eclipse/>
+</entry>

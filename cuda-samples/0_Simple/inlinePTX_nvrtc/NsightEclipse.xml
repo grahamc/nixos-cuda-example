@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Using Inline PTX with libNVRTC</name>
+    <description><![CDATA[A simple test application that demonstrates a new CUDA 4.0 ability to embed PTX in a CUDA kernel.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,libNVRTC</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies</scope>
+    <files>
+    </files>
+    <cudaapi>cudaMalloc</cudaapi>
+    <cudaapi>cudaMallocHost</cudaapi>
+    <cudaapi>cudaFree</cudaapi>
+    <cudaapi>cudaFreeHost</cudaapi>
+    <cudaapi>cudaMemcpy</cudaapi>
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">PTX Assembly</keyconcepts>
+    <keyconcepts level="basic">CUDA Driver API</keyconcepts>
+    <keyconcepts level="advanced">Runtime Compilation</keyconcepts>
+    <library os="linux">cuda</library>
+    <library os="windows">cuda</library>
+    <library os="macosx" framework="true">CUDA</library>
+    <library>nvrtc</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <include-path>$(CUDA_PATH)/include</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <type>exe</type>
+    <primary-file>inlinePTX.cpp</primary-file>
+    <required_dependencies>
+        <dependency>NVRTC</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, windows7:x86_64, macosx:x86_64, linux:ppc64le</supported-env>
+    <no-nsight-eclipse/>
+</entry>

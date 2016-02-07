@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Device Query Driver API</name>
+    <description><![CDATA[This sample enumerates the properties of the CUDA devices present using CUDA Driver API calls]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords></keywords>
+    <scope>1:CUDA Basic Topics</scope>
+    <files>
+    </files>
+    <cudaapi level="driver">cuInit</cudaapi>
+    <cudaapi level="driver">cuDeviceGetCount</cudaapi>
+    <cudaapi level="driver">cuDeviceComputeCapability</cudaapi>
+    <cudaapi level="driver">cuDriverGetVersion</cudaapi>
+    <cudaapi level="driver">cuDeviceTotalMem</cudaapi>
+    <cudaapi level="driver">cuDeviceGetAttribute</cudaapi>
+    <keyconcepts level="basic">CUDA Driver API</keyconcepts>
+    <keyconcepts level="basic">Device Query</keyconcepts>
+    <library os="linux">cuda</library>
+    <library os="windows">cuda</library>
+    <library os="macosx" framework="true">CUDA</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <type>exe</type>
+    <primary-file>deviceQueryDrv.cpp</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

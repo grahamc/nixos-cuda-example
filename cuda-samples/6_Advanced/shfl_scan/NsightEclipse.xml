@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>CUDA Parallel Prefix Sum with Shuffle Intrinsics (SHFL_Scan)</name>
+    <description><![CDATA[This example demonstrates how to use the shuffle intrinsic __shfl_up to perform a scan operation across a thread block.  A GPU with Compute Capability SM 3.0. is required to run the sample]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <from>3.0</from>
+    </supported_sm_architectures>
+    <keywords>GPGPU,CUDA,scan,parallel prefix sum,Data-Parallel Algorithms</keywords>
+    <scope>1:CUDA Advanced Topics,1:Data-Parallel Algorithms,1:Performance Strategies</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">Data-Parallel Algorithms</keyconcepts>
+    <keyconcepts level="advanced">Performance Strategies</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>shfl_scan.cu</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

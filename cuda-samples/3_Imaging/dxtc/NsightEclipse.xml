@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>DirectX Texture Compressor (DXTC)</name>
+    <description><![CDATA[High Quality DXT Compression using CUDA. This example shows how to implement an existing computationally-intensive CPU compression algorithm in parallel on the GPU, and obtain an order of magnitude performance improvement.]]></description>
+    <whitepaper>doc\cuda_dxtc.pdf</whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>Texture Compression,DXTC,S3TC,cluster fit,power method,covariance,least squares</keywords>
+    <scope>1:CUDA Advanced Topics,2:Image Processing,2:Data Compression</scope>
+    <files>
+        <file>data\lena-orig.ppm</file>
+        <file>data\lorikeet-orig.ppm</file>
+        <file>data\colors.ppm</file>
+        <file>data\lena_std.ppm</file>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">Image Processing</keyconcepts>
+    <keyconcepts level="advanced">Image Compression</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>dxtc.cu</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

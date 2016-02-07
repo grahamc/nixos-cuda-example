@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Peer-to-Peer Bandwidth Latency Test with Multi-GPUs</name>
+    <description><![CDATA[This application demonstrates the CUDA Peer-To-Peer (P2P) data transfers between pairs of GPUs and computes latency and bandwidth.  Tests on GPU pairs using P2P and without P2P are tested.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <include>all</include>
+    </supported_sm_architectures>
+    <keywords>CUDA,Performance,multi-GPU support,peer to peer</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies</scope>
+    <files>
+    </files>
+    <cudaapi>cudaDeviceCanAccessPeer</cudaapi>
+    <cudaapi>cudaDeviceEnablePeerAccess</cudaapi>
+    <cudaapi>cudaDeviceDisablePeerAccess</cudaapi>
+    <cudaapi>cudaEventCreateWithFlags</cudaapi>
+    <cudaapi>cudaEventElapsedTime</cudaapi>
+    <cudaapi>cudaMemcpy</cudaapi>
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">Asynchronous Data Transfers</keyconcepts>
+    <keyconcepts level="basic">Unified Virtual Address Space</keyconcepts>
+    <keyconcepts level="basic">Peer to Peer Data Transfers</keyconcepts>
+    <keyconcepts level="basic">Multi-GPU</keyconcepts>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>p2pBandwidthLatencyTest.cu</primary-file>
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm, linux:ppc64le</supported-env>
+</entry>

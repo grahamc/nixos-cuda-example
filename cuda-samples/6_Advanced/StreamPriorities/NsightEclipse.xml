@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+    <name>Stream Priorities</name>
+    <description><![CDATA[This sample demonstrates basic use of stream priorities.]]></description>
+    <whitepaper></whitepaper>
+    <supported_sm_architectures>
+        <from>3.5</from>
+    </supported_sm_architectures>
+    <keywords>GPGPU,Streams</keywords>
+    <scope>1:CUDA Advanced Topics,1:Streams</scope>
+    <files>
+    </files>
+    <cudaapi></cudaapi>
+    <keyconcepts level="advanced">CUDA Streams and Events</keyconcepts>
+    <library>cudadevrt</library>
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <devicecompilation>whole</devicecompilation>
+    <sm-arch>sm32</sm-arch>
+    <sm-arch>sm35</sm-arch>
+    <sm-arch>sm37</sm-arch>
+    <sm-arch>sm50</sm-arch>
+    <sm-arch>sm52</sm-arch>
+    <sm-arch>sm53</sm-arch>
+    <type>exe</type>
+    <primary-file>StreamPriorities.cu</primary-file>
+    <required_dependencies>
+        <dependency>Stream-Priorities</dependency>
+    </required_dependencies>
+    <supported-env>linux:x86_64, linux:ppc64le</supported-env>
+</entry>
