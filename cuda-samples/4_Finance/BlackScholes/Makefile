@@ -190,9 +190,9 @@ SAMPLE_ENABLED := 1
 
 # Gencode arguments
 ifeq ($(TARGET_ARCH),armv7l)
-SMS ?= 20 30 32 35 37 50 52
+SMS ?= 30 32 35 37 50 52
 else
-SMS ?= 20 30 35 37 50 52
+SMS ?= 30 35 37 50 52
 endif
 
 ifeq ($(SMS),)
@@ -211,7 +211,7 @@ GENCODE_FLAGS += -gencode arch=compute_$(HIGHEST_SM),code=compute_$(HIGHEST_SM)
 endif
 endif
 
-ALL_CCFLAGS += -po maxrregcount=16
+#ALL_CCFLAGS += -po maxrregcount=16
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"
