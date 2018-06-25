@@ -236,7 +236,7 @@ generateTriangles(float4 *pos, float4 *norm, uint *compactedVoxelArray, uint *nu
 
     if (i > activeVoxels - 1)
     {
-        // can't return here because of syncthreads()
+        // can't return here because of __syncthreads()
         i = activeVoxels - 1;
     }
 

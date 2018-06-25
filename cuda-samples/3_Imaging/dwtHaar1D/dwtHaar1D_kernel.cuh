@@ -148,7 +148,7 @@ dwtHaar1D(float *id, float *od, float *approx_final,
     // early out if possible
     // the compiler removes this part from the source because dlevels is
     // a constant shader input
-    // note: syncthreads in bodies of branches can lead to dead-locks unless the
+    // note: __syncthreads in bodies of branches can lead to dead-locks unless the
     // the condition evaluates the same way for ALL threads of a block, as in
     // this case
     if (dlevels > 1)
