@@ -204,9 +204,9 @@ endif
 
 # Gencode arguments
 ifeq ($(TARGET_ARCH),armv7l)
-SMS ?= 20 30 32 35 37 50 52
+SMS ?= 30 32 35 37 50 52
 else
-SMS ?= 20 30 35 37 50 52
+SMS ?= 30 35 37 50 52
 endif
 
 ifeq ($(SMS),)
