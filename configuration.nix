@@ -18,7 +18,7 @@
 
   systemd.services.nvidia-control-devices = {
     wantedBy = [ "multi-user.target" ];
-    serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
+    serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11.bin}/bin/nvidia-smi";
   };
 	    
   nixpkgs.config.allowUnfree = true;
